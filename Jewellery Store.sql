@@ -124,6 +124,15 @@ CREATE TABLE TonKho (
     CONSTRAINT FK_TonKho_DVT FOREIGN KEY (MaDVT) REFERENCES DONVITINH(MaDVT)
 );
 
+CREATE TABLE Users (
+    UserId INT AUTO_INCREMENT PRIMARY KEY,
+    Username VARCHAR(50) NOT NULL,
+    PasswordHash VARCHAR(100) NOT NULL,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 ------------------------------------
 
 DELIMITER $$
